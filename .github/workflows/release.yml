@@ -36,8 +36,8 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-region: {{ cookiecutter.prod_aws_region }}
-          role-to-assume: ${{ secrets.PROD_CODEARTIFACT_ROLE_ARN }}
+          aws-region: us-east-1
+          role-to-assume: $ {{secrets.PROD_CODEARTIFACT_ROLE_ARN }}
           role-session-name: RepoPublishPackage
           role-duration-seconds: 900
 
@@ -62,7 +62,7 @@ jobs:
       - name: publish documentation
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          personal_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
 
       - name: Build wheels and source tarball
@@ -86,5 +86,5 @@ jobs:
 
       - name: publish to prod
         run: |
-          aws codeartifact login --tool twine --domain {{ cookiecutter.prod_aws_codeartifact_domain }} --repository {{ cookiecutter.prod_aws_codeartifact_repository }}
+          aws codeartifact login --tool twine --domain innovative-core --repository innovative-pip
           twine upload --repository codeartifact dist/*

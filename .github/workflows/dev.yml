@@ -60,7 +60,7 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-region: {{ cookiecutter.dev_aws_region }}
+          aws-region: us-east-1
           role-to-assume: ${{ secrets.DEV_CODEARTIFACT_ROLE_ARN }}
           role-session-name: RepoPublishPackage
           role-duration-seconds: 900
@@ -89,5 +89,5 @@ jobs:
 
       - name: publish to dev
         run: |
-          aws codeartifact login --tool twine --domain {{ cookiecutter.dev_aws_codeartifact_domain }} --repository {{ cookiecutter.dev_aws_codeartifact_repository }}
+          aws codeartifact login --tool twine --domain innovative-core-dev --repository innovative-pip-dev
           twine upload --repository codeartifact dist/*
