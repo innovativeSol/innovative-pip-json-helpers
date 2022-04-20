@@ -1,7 +1,7 @@
-site_name: JSON Helpers
+site_name: JSON Helpers (json-helpers)
 # site_url: http://www.jieyu.ai
 repo_url: https://github.com/innovativeSol/innovative-pip-json-helpers
-repo_name: json_helpers
+repo_name: JSON Helpers
 #strict: true
 nav:
   - home: index.md
