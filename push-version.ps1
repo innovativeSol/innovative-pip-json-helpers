@@ -10,5 +10,7 @@ param(
 poetry version $version
 git add -A
 git commit -m "v$version"
+git add -A
+git commit -m "v$version post-commit updates"
 git tag v$version -m $message
 git push --atomic origin master v$version
