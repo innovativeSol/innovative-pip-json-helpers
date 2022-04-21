@@ -37,7 +37,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-region: us-east-1
-          role-to-assume: $ {{secrets.PROD_CODEARTIFACT_ROLE_ARN }}
+          role-to-assume: ${{ secrets.PROD_CODEARTIFACT_ROLE_ARN }}
           role-session-name: RepoPublishPackage
           role-duration-seconds: 900
 
