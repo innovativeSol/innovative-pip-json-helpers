@@ -49,7 +49,7 @@ jobs:
 
   publish_dev_build:
     # if test failed, we should not publish
-    needs: test
+    #needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
