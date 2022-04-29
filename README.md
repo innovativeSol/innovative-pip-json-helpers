@@ -14,15 +14,16 @@
 <a href="https://innovativeSol.github.io/innovative-pip-json-helpers/">
     <img src="https://img.shields.io/website/https/innovativeSol.github.io/innovative-pip-json-helpers/index.html.svg?label=docs&down_message=unavailable&up_message=available" alt="Documentation Status">
 </a>
-
 </p>
 
 
 Common JSON usage patterns.
 
 
+
 * Free software: MIT
 * Documentation: <https://innovativeSol.github.io/innovative-pip-json-helpers/>
+
 
 
 ## Features

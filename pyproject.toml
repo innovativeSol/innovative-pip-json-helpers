@@ -1,7 +1,7 @@
 [tool]
 [tool.poetry]
 name = "json-helpers"
-version = "0.1.9"
+version = "0.1.0"
 homepage = "https://github.com/innovativeSol/innovative-pip-json-helpers"
 description = "Common JSON usage patterns.."
 authors = ["Josh Russo <jrusso@innovativesol.com>"]
