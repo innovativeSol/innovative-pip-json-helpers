@@ -737,7 +737,7 @@ a serializable object for <code>o</code>, or calls the base implementation
 (to raise a <code>TypeError</code>).</p>
 <p>For example, to support arbitrary iterators, you could
 implement default like this::</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -745,7 +745,7 @@ implement default like this::</p>
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>def default(self, o):
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>def default(self, o):
     !!! try
         iterable = iter(o)
     except TypeError:
@@ -754,8 +754,7 @@ implement default like this::</p>
         return list(iterable)
     # Let the base class default method raise the TypeError
     return JSONEncoder.default(self, o)
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
         <details class="quote">
           <summary>Source code in <code>json_helpers/json_helpers.py</code></summary>
