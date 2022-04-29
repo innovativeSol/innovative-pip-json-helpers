@@ -91,4 +91,4 @@ jobs:
       - name: publish to dev
         run: |
           aws codeartifact login --tool twine --domain innovative-core-dev --repository innovative-pip-dev
-          twine upload --repository codeartifact dist/*
+          twine upload --repository codeartifact dist/* --verbose

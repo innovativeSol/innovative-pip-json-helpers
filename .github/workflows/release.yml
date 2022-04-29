@@ -87,4 +87,4 @@ jobs:
       - name: publish to prod
         run: |
           aws codeartifact login --tool twine --domain innovative-core --repository innovative-pip
-          twine upload --repository codeartifact dist/*
+          twine upload --repository codeartifact dist/* --verbose
